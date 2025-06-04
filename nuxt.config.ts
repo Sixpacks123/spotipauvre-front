@@ -2,7 +2,9 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/ui-pro'
+    '@nuxt/ui-pro',
+    '@nuxtjs/strapi',
+    'nuxt-music-flow'
   ],
 
   devtools: {
@@ -28,5 +30,9 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  strapi: {
+    url: process.env.STRAPI_URL || 'http://localhost:1337'
   }
 })
